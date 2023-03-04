@@ -1,6 +1,6 @@
-import cors from ('cors');
-import express from ('express');
-import {postStripePayment} from ('./routes/stripe.routes.js')
+import cors from 'cors';
+import express from 'express';
+import postStripePayment from './routes/stripe.routes.js';
 const app = express();
 
 //Middlewares 
