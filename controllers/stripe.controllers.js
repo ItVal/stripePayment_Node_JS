@@ -1,5 +1,7 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-require('dotenv').config();
+import stripe from 'stripe'
+import dotenv from 'dotenv';
+stripe(process.env.STRIPE_SECRET_KEY);
+dotenv.config({});
 
 export const postStripePayment = async (req, res, next) => {
 	try {
