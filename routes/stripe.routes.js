@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const route = express.Router();
-const postStripePayment = require('../controllers/stripe.controllers');
+import postStripePayment from '../controllers/stripe.controllers.js';
 
 route.post('/', postStripePayment);
 

@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 stripe(process.env.STRIPE_SECRET_KEY);
 dotenv.config({});
 
-export const postStripePayment = async (req, res, next) => {
+const postStripePayment = async (req, res, next) => {
 	try {
         const {product} = req.body;
         const session = await stripe.checkout.sessions.create({
@@ -31,3 +31,5 @@ export const postStripePayment = async (req, res, next) => {
 		return next(error);
 	}
 };
+
+export default postStripePayment;
