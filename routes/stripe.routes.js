@@ -1,8 +1,7 @@
 import express from 'express';
 const route = express.Router();
-import {postStripePayment} from '../controllers/index.js';
+import { post } from '../controllers/stripe.controllers.js';
 
-route.post('/', postStripePayment);
+route.post('/', post);
 
 export default route;
-
